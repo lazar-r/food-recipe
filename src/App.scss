@@ -34,7 +34,7 @@ input[type=text] {
     font-weight: 800;
   }
   .search-bar {
-    min-width: 70%;
+    min-width: 50%;
     min-height: 50px;
     border: none;
     background-color: #eeebeb;
@@ -65,5 +65,22 @@ input[type=text] {
   justify-items: center;
   img {
     min-height: 20px;
+  }
+}
+@media screen and (max-width: 659px) {
+  h1 {
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+  input.search-form.search-bar {
+    min-width: 60%;
+  }
+  .search-button {
+    margin-bottom: 1em;
+  }
+  div.recipe-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+    padding: 1em 0;
   }
 }
