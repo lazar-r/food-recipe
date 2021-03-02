@@ -64,7 +64,13 @@ input[type=text] {
   grid-template-columns: repeat(auto-fit, minmax(370px, 2fr));
   justify-items: center;
   img {
-    min-height: 20px;
+    border-radius: 50%;
+  }
+  li {
+    list-style: square;
+    text-align: left;
+    padding: .2em 0;
+    margin: 1.5em auto;
   }
 }
 @media screen and (max-width: 659px) {

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Recipe from './recipe';
 import './App.scss';
 import NumberFormat from 'react-number-format';
-import {Helmet} from "react-helmet";
+import Modal from './Modal'
 
 function App() {
   const APP_ID = 'eb530fce'
@@ -10,7 +10,8 @@ function App() {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken')
+  const [query, setQuery] = useState('chicken');
+  const [isOpen, setIsOpen] = useState('false')
 
   useEffect( () => {
     getRecipes()
@@ -47,8 +48,10 @@ function App() {
           calories = {
           <NumberFormat value={recipe.recipe.calories} displayType={'text'} thousandSeparator={false} decimalScale={0} />
         }
-          image = {recipe.recipe.image} className='image'/>
-      ))}
+          image = {recipe.recipe.image} className='image'
+          ingredients = {recipe.recipe.ingredients}
+          />
+      ))} 
       </div>
     </div>
   );
