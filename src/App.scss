@@ -72,6 +72,9 @@ input[type=text] {
     text-align: center;
     flex-wrap: nowrap;
   }
+  input[type=text] {
+    margin: 1em 0;
+  }
   input.search-form.search-bar {
     min-width: 60%;
   }
